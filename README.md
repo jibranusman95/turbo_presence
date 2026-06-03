@@ -78,7 +78,7 @@ That's the entire integration. Ship it.
 ┌──────────────────────────────────────────────────────┐
 │  📄 Quarterly Report                                 │
 │                                                      │
-│  👤 Alice  👤 Bob  +2        ← avatar stack          │
+│  👤 Alice  👤 Bob  +2        ← avatar stack         │
 │  Alice is typing…            ← typing indicator      │
 │                                                      │
 │  The Q3 numbers show▌                                │

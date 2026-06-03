@@ -60,7 +60,7 @@ module TurboPresence
       end
     end
 
-    def touch(room, user_id)
+    def touch(room, _user_id)
       @redis&.expire(redis_key(room), @ttl)
     end
 

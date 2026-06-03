@@ -28,7 +28,7 @@ RSpec.describe TurboPresence::RoomToken do
 
     it "raises InvalidToken for a tampered token" do
       token = described_class.generate(record)
-      tampered = token[0..-5] + "XXXX"
+      tampered = "#{token[0..-5]}XXXX"
       expect { described_class.verify!(tampered) }.to raise_error(described_class::InvalidToken)
     end
 

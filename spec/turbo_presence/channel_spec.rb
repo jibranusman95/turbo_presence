@@ -15,7 +15,7 @@ module ActionCable
 
       def stream_from(_stream); end
       def reject; end
-      def rejected?; false; end
+      def rejected? = false
     end
   end
 
@@ -49,7 +49,7 @@ RSpec.describe TurboPresenceChannel do
   def build_channel(token: valid_token, identity: alice_identity)
     described_class.new(
       room_token: token,
-      identity:   identity.to_json
+      identity: identity.to_json
     )
   end
 

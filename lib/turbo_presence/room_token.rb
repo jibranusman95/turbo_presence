@@ -22,7 +22,7 @@ module TurboPresence
         raise InvalidToken, "malformed token" unless last_dot
 
         json = raw[0, last_dot]
-        sig  = raw[last_dot + 1..]
+        sig  = raw[(last_dot + 1)..]
 
         raise InvalidToken, "invalid signature" unless secure_compare(sign(json), sig)
 

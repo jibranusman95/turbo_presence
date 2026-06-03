@@ -13,9 +13,7 @@ module TurboPresence
     end
 
     initializer "turbo_presence.assets" do |app|
-      if app.config.respond_to?(:assets)
-        app.config.assets.paths << root.join("app/javascript").to_s
-      end
+      app.config.assets.paths << root.join("app/javascript").to_s if app.config.respond_to?(:assets)
     end
   end
 end

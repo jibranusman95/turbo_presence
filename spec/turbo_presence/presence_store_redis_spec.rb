@@ -3,7 +3,7 @@
 require "spec_helper"
 
 RSpec.describe TurboPresence::PresenceStore do
-  let(:redis)    { instance_double("Redis") }
+  let(:redis)    { double("Redis") }
   let(:store)    { described_class.new(redis: redis, ttl: 60) }
   let(:room)     { "Document:1" }
   let(:identity) { { id: "1", name: "Alice", color: "#E63946" } }
