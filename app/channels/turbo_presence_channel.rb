@@ -28,20 +28,20 @@ class TurboPresenceChannel < ActionCable::Channel::Base
     y = data["y"].to_f.clamp(0.0, 1.0)
     TurboPresence.store.update_cursor(@room, @user_id, x: x, y: y)
     ActionCable.server.broadcast("turbo_presence:#{@room}", {
-      type:    "cursor",
-      user_id: @user_id,
-      x:       x,
-      y:       y
-    })
+                                   type: "cursor",
+                                   user_id: @user_id,
+                                   x: x,
+                                   y: y
+                                 })
   end
 
   def typing(data)
     ActionCable.server.broadcast("turbo_presence:#{@room}", {
-      type:    "typing",
-      user_id: @user_id,
-      name:    @identity[:name],
-      active:  data["active"]
-    })
+                                   type: "typing",
+                                   user_id: @user_id,
+                                   name: @identity[:name],
+                                   active: data["active"]
+                                 })
   end
 
   def heartbeat
@@ -52,8 +52,8 @@ class TurboPresenceChannel < ActionCable::Channel::Base
 
   def broadcast_presence
     ActionCable.server.broadcast("turbo_presence:#{@room}", {
-      type:  "presence",
-      users: TurboPresence.store.all(@room).values
-    })
+                                   type: "presence",
+                                   users: TurboPresence.store.all(@room).values
+                                 })
   end
 end

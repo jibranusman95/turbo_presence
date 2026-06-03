@@ -75,15 +75,15 @@ That's the entire integration. Ship it.
 ## How it looks
 
 ```
-┌─────────────────────────────────────┐
-│  📄 Quarterly Report                │
-│                                     │
-│  👤 Alice  👤 Bob  +2               │  ← avatar stack
-│  Alice is typing…                   │  ← typing indicator
-│                                     │
-│  The Q3 numbers show▌               │
-│            ↖ Bob                    │  ← live cursor
-└─────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│  📄 Quarterly Report                                 │
+│                                                      │
+│  👤 Alice  👤 Bob  +2        ← avatar stack         │
+│  Alice is typing…            ← typing indicator      │
+│                                                      │
+│  The Q3 numbers show▌                                │
+│            ↖ Bob             ← live cursor           │
+└──────────────────────────────────────────────────────┘
 ```
 
 ---

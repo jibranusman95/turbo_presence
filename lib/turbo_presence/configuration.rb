@@ -6,7 +6,7 @@ module TurboPresence
     attr_reader :user_identifier
 
     def initialize
-      @redis_url         = ENV["REDIS_URL"]
+      @redis_url         = ENV.fetch("REDIS_URL", nil)
       @presence_ttl      = 60
       @cursor_throttle_ms = 50
       @user_identifier   = ->(user) { { id: user.id, name: user.to_s } }

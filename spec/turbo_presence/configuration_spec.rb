@@ -11,7 +11,7 @@ RSpec.describe TurboPresence::Configuration do
   end
 
   it "reads REDIS_URL from environment" do
-    allow(ENV).to receive(:[]).with("REDIS_URL").and_return("redis://localhost:6379/9")
+    allow(ENV).to receive(:fetch).with("REDIS_URL", nil).and_return("redis://localhost:6379/9")
     cfg = described_class.new
     expect(cfg.redis_url).to eq("redis://localhost:6379/9")
   end
