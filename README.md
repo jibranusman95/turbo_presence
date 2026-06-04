@@ -311,6 +311,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ---
 
+## From the same author
+
+Small, sharp Ruby gems built to the same standard — 100% test coverage, zero dependencies beyond what's needed.
+
+| Gem | What it does |
+|-----|-------------|
+| [promptscrub](https://github.com/jibranusman95/promptscrub) | PII redaction middleware for LLM calls — strip sensitive data from prompts, rehydrate in responses |
+| [http_decoy](https://github.com/jibranusman95/http_decoy) | A real Rack server that runs inside your RSpec tests — test HTTP contracts, not stubs |
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
