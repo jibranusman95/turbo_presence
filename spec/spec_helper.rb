@@ -5,7 +5,6 @@ SimpleCov.start do
   add_filter "/spec/"
   minimum_coverage 75
   add_filter "/lib/turbo_presence/railtie.rb"
-  add_filter "/lib/turbo_presence/view_helper.rb"
   add_filter "/app/"
 end
 
