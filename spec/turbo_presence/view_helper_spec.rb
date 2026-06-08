@@ -9,11 +9,13 @@ require "turbo_presence/view_helper"
 require "turbo_presence/room_token"
 
 # Minimal Rails stub needed for RoomToken.sign
-module Rails
-  def self.application
-    @application ||= Struct.new(:secret_key_base).new("a" * 64)
+unless defined?(Rails)
+  module Rails
+    def self.application
+      @application ||= Struct.new(:secret_key_base).new("a" * 64)
+    end
   end
-end unless defined?(Rails)
+end
 
 RSpec.describe TurboPresence::ViewHelper do
   # Stand up a minimal host object that has what the view helper needs
