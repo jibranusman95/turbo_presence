@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.2] — 2026-06-08
+
+### Fixed
+- Railtie asset initializer used `root` which is only available on `Rails::Engine`, not `Rails::Railtie`. Replaced with `Pathname.new(__dir__).join("../..")` to correctly resolve the gem root and add `app/javascript` to the asset load path.
+
 ## [0.1.1] — 2026-06-08
 
 ### Fixed
