@@ -293,15 +293,29 @@ end
 
 ## Contributing
 
+I built this myself — which means it works great for the cases I thought of, and probably has rough edges for the ones I didn't. If you hit something weird, **open an issue**. I read them all and respond fast.
+
+Want to fix something or add a feature? **Send a PR.** No CLA, no process overhead, no committee review. If the tests pass and the change makes sense, it's getting merged. I'm one person and I genuinely appreciate the help — you can take this further than I can alone.
+
+Not sure where to start? Look for [`good first issue`](https://github.com/jibranusman95/turbo_presence/issues?q=label%3A%22good+first+issue%22) labels, or just open an issue and ask.
+
 ```bash
 git clone https://github.com/jibranusman95/turbo_presence
 cd turbo_presence
 bundle install
-bundle exec rspec
-bundle exec rubocop
+bundle exec rspec    # all green? you're good to go
+bundle exec rubocop  # no new offenses
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+
+### Contributors
+
+Everyone who's made this better:
+
+<a href="https://github.com/jibranusman95/turbo_presence/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jibranusman95/turbo_presence" />
+</a>
 
 ---
 
